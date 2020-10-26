@@ -13,7 +13,7 @@ Consists of columns (with column headers) and rows.
 
 * Column - Correspond to the attributes of the object
 * Row - One set of attributes to one instance that a table describes. AKA records or tuples
-* Table - Predefined format of rows and columns that defines an entity. AKA a file
+* Table - Predefined at of rows and columns that defines an entity. AKA a file
 * DBMS - Data Base Management System allows a computer to perform functions of storing, retrieving, adding etc the data.
 
 ### Type of Databases
@@ -65,3 +65,103 @@ Consists of columns (with column headers) and rows.
 	* CREATA etc.
 * DCL (data control language)
 * TCL (transaction control language)
+
+#### Some Commands
+
+* Create database:
+```
+CREATE DATABASE my_db;
+```
+
+* Use a database:
+```
+use my_db;
+```
+
+* Create a table with two columns that can accept characters of 10 and 6 length:
+```
+CREATE TABLE table_name(
+	column_one VARCHAR(10),
+	column_two VARCHAR(6)
+	);
+```
+
+* Information about a table:
+```
+SP_HELP table_name
+```
+
+* Delete table:
+```
+DROP table_name
+```
+
+* Add column to table:
+```
+ALTER TABLE table_name
+ADD column_name data_type;
+```
+
+* Insert into table:
+```
+INSERT INTO table_name(
+	column_one, column_two
+)
+VALUES(
+	value1, value2
+);
+```
+N.B. VARCHAR, CHAR and DATA use quotes for their values, but not the number ones
+
+* Update contents of table:
+```
+UPDATE table_name
+	SET column = value					// .e.g. person_name to change to
+	WHERE column_two > something;  		//Some expression like person_id = 2, to get specific person
+```
+
+* Delete contents from table (same format as UPDATE):
+```
+DELETE FROM table_name
+	WHERE column > something;		// Some expression here
+```
+
+* Null value:
+```
+...
+	column_two VARCHAR(10) NOT NULL,
+...
+```
+
+* Primary key set:
+```
+...
+	person_id INT NOT NULL IDENTITY PRIMARY KEY,
+...
+```
+
+
+
+
+### Data Types
+* VARCHAR (basically Strings):
+	* String, specify the max amount of length used
+	* VARCHAR(MAX)
+* CHAR or CHARACTERS:
+	* Fixed length and amount of space used
+* INT:
+	* Positive or negative
+* DATE or TIME or DATETIME:
+	* Stores date, time, or both.
+* DECIMAL or NUMERIC:
+	* Show number digits to be stored on both side of the decimal places, can be used interchangably
+* BINARY:
+	* Stores binary data as an image or file
+* FLOAT:
+	* Scientific and very large numbers
+* BIT:
+	* Equivalent to binary (0, 1, or NULL)
+* NULL:
+	* Undefined value, absence of something
+	* Used 	data integrity reasons
+	* Standard practice
