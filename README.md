@@ -7,7 +7,7 @@
 * Structured set of data
 	* With tables to keep various pieces of data
 
-#### Tables
+### Tables
 
 Consists of columns (with column headers) and rows.
 
@@ -56,4 +56,12 @@ Consists of columns (with column headers) and rows.
 * MySQL
 * Redis
 * MongoDB
-*
+
+
+### SQL (Structured Query Language)
+* DML (data manipulation language)
+	* SELECT etc.
+* DDL (data definition language)
+	* CREATA etc.
+* DCL (data control language)
+* TCL (transaction control language)
