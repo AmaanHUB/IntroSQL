@@ -62,9 +62,11 @@ Consists of columns (with column headers) and rows.
 * DML (data manipulation language)
 	* SELECT etc.
 * DDL (data definition language)
-	* CREATA etc.
+	* CREATE etc.
 * DCL (data control language)
+	* GRANT, REVOKE etc.
 * TCL (transaction control language)
+	* COMMIT etc.
 
 #### Some Commands
 
