@@ -155,6 +155,7 @@ DELETE FROM table_name
 	* Positive or negative
 * DATE or TIME or DATETIME:
 	* Stores date, time, or both.
+	* 'YYYYMMDD' format
 * DECIMAL or NUMERIC:
 	* Show number digits to be stored on both side of the decimal places, can be used interchangably
 * BINARY:
