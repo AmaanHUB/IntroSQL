@@ -22,4 +22,4 @@ CREATE TABLE loan(
     loan_date DATE,
     price DECIMAL(5,2)
     -- probably a foreign key here for user
-)
+);
