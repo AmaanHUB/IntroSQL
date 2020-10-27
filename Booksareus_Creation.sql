@@ -2,14 +2,14 @@ CREATE DATABASE booksareus;
 USE booksareus;
 CREATE TABLE users(
   user_id INT NOT NULL IDENTITY PRIMARY KEY,
-  email VARCHAR(20),
-  phone_number VARCHAR(11),
-  forename VARCHAR(20),
-  surname VARCHAR(20)
+  email VARCHAR(40),
+  phone_number VARCHAR(30),
+  forename VARCHAR(30),
+  surname VARCHAR(30)
 );
 CREATE TABLE eBook(
   ebook_id INT NOT NULL IDENTITY PRIMARY KEY,
-  title VARCHAR(20),
+  title VARCHAR(40),
   book_location VARCHAR(20),
   release_date DATE,
   book_summary VARCHAR(MAX) NOT NULL,
