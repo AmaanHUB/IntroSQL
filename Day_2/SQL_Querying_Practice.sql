@@ -1,24 +1,35 @@
-CREATE DATABASE booksareus;
-USE booksareus;
-CREATE TABLE users(
-  user_id INT NOT NULL IDENTITY PRIMARY KEY,
-  email VARCHAR(40),
-  phone_number VARCHAR(30),
-  forename VARCHAR(30),
-  surname VARCHAR(30)
-);
-CREATE TABLE eBook(
-  ebook_id INT NOT NULL IDENTITY PRIMARY KEY,
-  title VARCHAR(40),
-  book_location VARCHAR(20),
-  release_date DATE,
-  book_summary VARCHAR(MAX) NOT NULL,
-  author INT REFERENCES users(user_id)
-);
-CREATE TABLE loan(
-  transaction_id INT NOT NULL IDENTITY PRIMARY KEY,
-  loan_date DATE,
-  price DECIMAL(5, 2),
-  customer_id INT REFERENCES users(user_id),
-  eBook_id INT REFERENCES eBook(ebook_id)
-);
+USE Northwind;
+
+-- Number of employees in London
+SELECT COUNT(*) FROM Employees
+WHERE City = 'London';
+
+
+-- Which is doctor?
+SELECT FirstName, LastName FROM Employees
+WHERE TitleOfCourtesy = 'Dr.';
+
+-- How many products are discontinued?
+SELECT COUNT(DISTINCT ProductName) FROM Products
+WHERE Discontinued = 1;
+
+-- What are the name and product IDs
+-- of products below <5
+SELECT ProductID, ProductName FROM Products
+WHERE UnitPrice < 5;
+
+-- Category name with initials beginning with B or S
+SELECT CategoryName FROM Categories WHERE CategoryName LIKE 'B%' OR CategoryName LIKE 'S%';
+
+-- How many orders for Employee 5 and 7?
+SELECT COUNT(OrderID) FROM Orders WHERE EmployeeID = 5 OR EmployeeID = 7;
+
+-- Concatenation with first and last name employee
+SELECT FirstName + ' ' + LastName AS 'Employee Name' FROM Employees;
+
+-- Region codes to list six countries
+SELECT DISTINCT(Country) FROM Customers
+WHERE Region != 'NULL';
+
+-- How many orders?
+SELECT COUNT(*)
