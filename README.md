@@ -135,11 +135,18 @@ DELETE FROM table_name
 ...
 ```
 
-* Primary key set:
+* Primary key set (IDENTITY is auto increment):
 ```
 ...
 	person_id INT NOT NULL IDENTITY PRIMARY KEY,
 ...
+```
+
+* Foreign key set:
+```
+...
+column_name data_type REFERENCES table_name(other_column_name)
+
 ```
 
 
