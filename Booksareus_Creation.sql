@@ -21,6 +21,6 @@ CREATE TABLE loan(
     transaction_id INT NOT NULL IDENTITY PRIMARY KEY,
     loan_date DATE,
     price DECIMAL(5,2)
-	customer_id INT REFERENCES user(user_id),
-	eBook_id INT REFERENCES eBook(ebook_id)
+    customer_id INT REFERENCES user(user_id),
+    eBook_id INT REFERENCES eBook(ebook_id)
 );
