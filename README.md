@@ -195,5 +195,79 @@ column_name data_type REFERENCES table_name(other_column_name)
 		* when a non-key column is functionally dependent on another key column, which is functionally dependent on the primary key. ONLY DEPENDS ON THE PRIMARY KEY
 			* Only want to update one table if changing relevant information
 
-### Querying an SQL Database
 
+### Using SQL As A ...
+#### Tester
+* Getting data for testing
+* Saving data, generated during testing activity
+* Data verification in databases
+	* Find data
+	* To ensure data integrity
+	* Manipulate test data for specific tests
+
+#### DevOps
+* Environments need databases
+* Need to look over
+* Same data verifications
+* Testing databases
+
+### Querying An SQL Database
+```
+SELECT column_one, column_two FROM table_name, WHERE condition
+```
+In order of syntax:
+* SELECT
+* DISTINCT (.e.g. COUNT/Unique etc)
+* FROM
+* WHERE
+* GROUP BY
+* HAVING
+* ORDER BY
+
+* WHERE expression example (can use AND/OR and operators too):
+```
+... WHERE column = 'term';
+
+... WHERE animal = 'Chicken' AND colour = 'Brown';
+
+...	WHERE price > 20 AND price <= 100;
+```
+
+* TOP answers don't need to have used the order by and limit expression like in PostgreSQL:
+```
+SELECT TOP 5 column_name, column_two FROM table_name
+WHERE conditions;
+```
+
+* DISTINCT removes duplicates. Basically UNIQUE:
+```
+SELECT DISTINCT column FROM table_name ...
+
+SELECT COUNT(DISTINCT column) FROM table_name ...
+```
+
+* Wildcards (often use a LIKE part too):
+	* * - everything
+	* % - substitute for =>0 characters
+	* _ - substitute for a single character
+	* [charlist] - sets and ranges of characters to match
+		* .e.g. LIKE [ABVZ]%
+	* [^charlist] - sets and ranges that don't match
+
+* IN acts as a mini array type of thing in MSSQL:
+```
+SELECT * FROM table WHERE column IN ('LA, CP');
+```
+
+* BETWEEN is another way to make a range:
+```
+... WHERE column BETWEEN 10 AND 1029;
+```
+
+* AS can change the column names in the output:
+```
+SELECT column_name AS 'Column Name' FROM table_name;
+
+SELECT column AS 'Column', column_two + ', ' + column_one AS 'Column-Two' FROM table_name;
+```
+```
