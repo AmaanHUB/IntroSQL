@@ -1,5 +1,7 @@
 CREATE DATABASE booksareus;
 
+USE booksareus;
+
 CREATE TABLE users(
     user_id INT NOT NULL IDENTITY PRIMARY KEY,
     email VARCHAR(20),
