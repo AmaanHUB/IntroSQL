@@ -247,7 +247,7 @@ SELECT COUNT(DISTINCT column) FROM table_name ...
 ```
 
 * Wildcards (often use a LIKE part too):
-	* * - everything
+	* \* - everything
 	* % - substitute for =>0 characters
 	* _ - substitute for a single character
 	* [charlist] - sets and ranges of characters to match
