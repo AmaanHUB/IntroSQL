@@ -13,7 +13,8 @@ CREATE TABLE eBook(
     ebook_id INT NOT NULL IDENTITY PRIMARY KEY,
     title VARCHAR(20),
     book_location VARCHAR(20),
-    release_data DATE,
+    release_date DATE,
+	book_summary VARCHAR(MAX) NOT NULL,
     author VARCHAR(20)
 );
 
