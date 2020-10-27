@@ -31,5 +31,3 @@ SELECT FirstName + ' ' + LastName AS 'Employee Name' FROM Employees;
 SELECT DISTINCT(Country) FROM Customers
 WHERE Region != 'NULL';
 
--- How many orders?
-SELECT COUNT(*)
