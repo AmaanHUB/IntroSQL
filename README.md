@@ -175,3 +175,25 @@ column_name data_type REFERENCES table_name(other_column_name)
 	* Undefined value, absence of something
 	* Used 	data integrity reasons
 	* Standard practice
+
+
+### Normal Forms
+'Normal Forms' are best practices for designing databases. See the first three types below:
+
+* 1st Normal Form:
+	* Everything is atomic (data presented as small as possible)
+		* .e.g. field for first name and surname
+	* No repeating groups (same attribute not more than once)
+		* .e.g. if more than one colour for one product ID, maybe have another table just for the colours to refer to the product ID
+* 2nd Normal Form:
+	* Must be in 1NF
+	* All non-key attributes should be relevant to the primary key
+	* Single column primary key
+* 3rd Normal Form:
+	* Must be in 2NF
+	* No transitive functional dependency -
+		* when a non-key column is functionally dependent on another key column, which is functionally dependent on the primary key. ONLY DEPENDS ON THE PRIMARY KEY
+			* Only want to update one table if changing relevant information
+
+### Querying an SQL Database
+
