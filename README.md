@@ -283,6 +283,36 @@ SELECT column AS 'Column', column_two + ', ' + column_one AS 'Column-Two' FROM t
 	* % - Modulo
 	* / - Divide
 
+
+* CASE statement:
+	* Used for if statements
+```
+SELECT columns, CASE
+WHEN  condition THEN result
+WHEN condition2 THEN result2
+WHEN conditionN THEN resultN
+ELSE result
+END
+FROM tables;
+```
+	* Should be noted that aggregates columns cannot be used in the WHEN conditions, must use the calculations
+
+* GROUP BY:
+```
+SELECT column_one ...
+...
+FROM table
+GROUP BY column_one;
+```
+
+* HAVING:
+	* When want to filter something when it has an aggregate function on it. WHERE will not work.
+	* Can be used after GROUP BY etc.
+```
+...
+HAVING function_or_expression;
+```
+
 #### String Functions
 Following functions can be used to manipulate text using the SELECT clause:
 * SUBSTRING(expression, start, length)
@@ -299,3 +329,25 @@ Following functions can be used to manipulate text using the SELECT clause:
 * UPPER or LOWER -
 	* .e.g. UPPER(name) to convert to all upper case.
 * N.B. Use double single quotes to escape a single quote .e.g. 'Amaan''s'
+
+### Date Functions
+* GETDATE()
+	* SELECT GETDATE() returns the current date and time
+* SYSDATETIME()
+	* SELECT SYSDATETIME() returns the date and time of computer being used
+* DATEADD(increment, number of increment, column)
+	* adds time to date .i.e. d, w, mm, yy
+* DATEDIFF(increment, date1, date2)
+* YEAR
+	* SELECT YEAR(date) to extract the year from a date
+* MONTH
+* DAY
+
+
+### Aggregate Functions
+* AVG - Mean
+* SUM
+* COUNT
+* MIN
+* MAX
+
