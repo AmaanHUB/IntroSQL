@@ -351,3 +351,10 @@ Following functions can be used to manipulate text using the SELECT clause:
 * MIN
 * MAX
 
+
+### Joins
+
+Infographic below helps explains JOIN quite easily:
+![](https://3.bp.blogspot.com/-T3AF_1dtm8o/We25HQL809I/AAAAAAAAA2E/tKsbZGd2Ev0woezzYxiKBUIGGNkXYKAlQCLcBGAs/s1600/sql-joins.png)
+
+* In theory, can join more than two tables.
