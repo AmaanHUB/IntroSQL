@@ -282,3 +282,20 @@ SELECT column AS 'Column', column_two + ', ' + column_one AS 'Column-Two' FROM t
 	* * - Multiply
 	* % - Modulo
 	* / - Divide
+
+#### String Functions
+Following functions can be used to manipulate text using the SELECT clause:
+	* SUBSTRING(expression, start, length)
+		* .e.g. SUBSTRING(name,1,1) for the initial
+	* CHARINDEX(arg1, arg2) where arg1 is what you are looking for and arg2 is where you are looking, ouputs the index (starts from 1)
+		* .e.g. CHARINDEX('''', column_name) (looking for an ' in a string)
+	* LEFT or RIGHT -
+		* .e.g. LEFT(name, 5) for first (or last) 5 characters
+	* LTRIM or RTRIM -
+		* removes spaces at the beginning or end of a string.
+	* LEN -
+		* .e.g. LEN(name) for the length of the name
+	* REPLACE(name, ' ', '_') to replace spaces with underscores
+	* UPPER or LOWER -
+		* .e.g. UPPER(name) to convert to all upper case.
+* N.B. Use double single quotes to escape a single quote .e.g. 'Amaan''s'
