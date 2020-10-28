@@ -270,9 +270,15 @@ SELECT column_name AS 'Column Name' FROM table_name;
 
 SELECT column AS 'Column', column_two + ', ' + column_one AS 'Column-Two' FROM table_name;
 ```
-```
 
 * ORDER BY:
 ```
 ... ORDER BY 'column_name' DESC
 ```
+
+* Arithmetic:
+	* + - Add (can be used on DATETIME columns)
+	* - - Subtract (can be used on DATETIME columns)
+	* * - Multiply
+	* % - Modulo
+	* / - Divide
