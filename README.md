@@ -60,13 +60,13 @@ Consists of columns (with column headers) and rows.
 
 ### SQL (Structured Query Language)
 * DML (data manipulation language)
-	* SELECT etc.
+	* SELECT, INSERT, UPDATE, DELETE
 * DDL (data definition language)
-	* CREATE etc.
+	* CREATE, ALTER, DROP, TRUNCATE
 * DCL (data control language)
-	* GRANT, REVOKE etc.
+	* GRANT, REVOKE
 * TCL (transaction control language)
-	* COMMIT etc.
+	* COMMIT, ROLLBACK, SAVEPOINT
 
 #### Some Commands
 
@@ -358,3 +358,7 @@ Infographic below helps explains JOIN quite easily:
 ![](https://3.bp.blogspot.com/-T3AF_1dtm8o/We25HQL809I/AAAAAAAAA2E/tKsbZGd2Ev0woezzYxiKBUIGGNkXYKAlQCLcBGAs/s1600/sql-joins.png)
 
 * In theory, can join more than two tables.
+
+
+### Subqueries
+
