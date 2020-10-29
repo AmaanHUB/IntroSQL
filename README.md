@@ -352,6 +352,14 @@ Following functions can be used to manipulate text using the SELECT clause:
 * MAX
 
 
+### FORMAT
+* Used to format dates to whatever format you prefer .e.g.
+```
+FORMAT(dates, 'format')
+```
+* Formats include:
+	* dd/MM/yyyy
+
 ### Joins
 
 Infographic below helps explains JOIN quite easily:
@@ -361,4 +369,17 @@ Infographic below helps explains JOIN quite easily:
 
 
 ### Subqueries
-
+* SELECT inside a SELECT
+	* doing a search on some results
+	* are in ( )
+* Can be a substitute for JOINs at times
+* These tend to be used since WHERE etc. statements do not work with aggregate functions.
+* Generic example:
+```
+SELECT column_name [, column_name ]
+FROM   table1 [, table2 ]
+WHERE  column_name OPERATOR
+   (SELECT column_name [, column_name ]
+   FROM table1 [, table2 ]
+   [WHERE])
+```
