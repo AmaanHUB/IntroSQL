@@ -284,6 +284,11 @@ SELECT column AS 'Column', column_two + ', ' + column_one AS 'Column-Two' FROM t
 * ORDER BY:
 ```
 ... ORDER BY 'column_name' DESC
+
+
+--Also
+
+ORDER BY column_name DESC, column_one DESC
 ```
 
 * Arithmetic:
