@@ -258,6 +258,7 @@ SELECT COUNT(DISTINCT column) FROM table_name ...
 	* [charlist] - sets and ranges of characters to match
 		* .e.g. LIKE [ABVZ]%
 	* [^charlist] - sets and ranges that don't match
+	* LIKE is appended to the WHERE expression
 
 * IN acts as a mini array type of thing in MSSQL:
 ```
