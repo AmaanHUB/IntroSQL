@@ -61,8 +61,10 @@ Consists of columns (with column headers) and rows.
 ### SQL (Structured Query Language)
 * DML (data manipulation language)
 	* SELECT, INSERT, UPDATE, DELETE
+		* More to do with rows on tables (actual data on a table .i.e. manipulation)
 * DDL (data definition language)
 	* CREATE, ALTER, DROP, TRUNCATE
+		* Defines tables and databases (structure of a database)
 * DCL (data control language)
 	* GRANT, REVOKE
 * TCL (transaction control language)
