@@ -143,13 +143,16 @@ DELETE FROM table_name
 	person_id INT NOT NULL IDENTITY PRIMARY KEY,
 ...
 ```
-
+	* Primary key can have non-numeric data types, though you usually want it to be
 * Foreign key set:
 ```
 ...
 column_name data_type REFERENCES table_name(other_column_name)
 
 ```
+	* Foreign key may be NULL (though you normally don't want it to be)
+	* Used for 1-to-n relationship between two tables
+	* Foreign key can have non-numeric data types, though you usually want it to be
 
 
 
